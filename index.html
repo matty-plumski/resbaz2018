@@ -36,6 +36,36 @@
     --header-background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://farm1.staticflickr.com/710/22294999764_cc57e2af25_z.jpg)
   }
   </style>
+  <head>
+    <!-- import latest release version of all components from polygit -->
+    <base href="https://polygit.org/components/">
+    <script src="webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="app-layout/app-toolbar/app-toolbar.html">
+
+    <!-- sample-content included for demo purposes only -->
+    <link rel="import" href="app-layout/demo/sample-content.html">
+
+    <style is="custom-style">
+      body {
+        /* No margin on body so toolbar can span the screen */
+        margin: 0;
+      }
+      app-toolbar {
+        /* Toolbar is the main header, so give it some color */
+        background-color: #1E88E5;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        color: white;
+        --app-toolbar-font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <app-toolbar>
+      <div main-title>Spork</div>
+    </app-toolbar>
+    <sample-content size="10"></sample-content>
+  </body>
+  
 </head>
 <body unresolved>
   <resbaz-header title="Research Bazaar">
